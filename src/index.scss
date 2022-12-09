@@ -1,0 +1,140 @@
+//////////////// VARIABLES ///////////////////////////
+$main-font: Arial, Helvetica, sans-serif;
+$main-font-size:2rem ;
+$main-color: rgb(131, 127, 127);
+$contrast-color: white;
+
+// MIXIN PRESETS
+@mixin flex-container-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin white-text-black-bg {
+  color: $contrast-color;
+  background-color: $main-color;
+} 
+@mixin black-text-white-bg {
+  font-family: $main-font;
+  color: $main-color;
+  background-color: $contrast-color;  
+} 
+* {
+    margin: 0;
+  }
+  body{
+    box-sizing: border-box
+  }
+  ////////////////////// NAV /////////////////////////
+   .nav{
+    @include white-text-black-bg;
+    @include flex-container-centered;
+    a {
+      @include white-text-black-bg;
+      text-decoration: none;
+      font-family: $main-font;
+      div {
+        margin: 1rem;
+        font-size: large;
+      }
+    }
+   }
+  ////////////////////// SECTION USER /////////////////////////
+   .logout{
+    padding-left: 3%;
+    margin-right: 1%;
+   }
+  ////////////////////// SECTION CART /////////////////////////
+   .cart, .section {
+     color: grey;
+     display: flex;
+     align-items: right;
+     justify-content: right;
+     text-decoration: none;
+     font-size: x-large;
+     font-family: 'Times New Roman', Times, serif;
+
+    a {
+      text-decoration: none;
+      font-family: $main-font;
+      div {
+        margin: 1rem;
+        font-size: large;
+      }
+      
+    }
+   }
+//////////////////// IF //////////////////////////// 
+.if{
+  color: red;
+  text-align: right;
+  margin-right: 1%;
+}
+///////////////////////////PEOPLE IMAGE ////////////
+  .avatar-image {
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 50%;
+  }
+  //////////////////////// HOME /////////////////////////
+  .home{
+    background-image: url('../src/assets/bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  }
+.home h1{
+  font-size: 5rem;
+  padding-top: 15%;
+  color: white;
+  text-shadow: 2px 2px 2px red;
+  
+}
+.home a{
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 2px red;
+  text-decoration: none;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.home h2{
+  font-size: 2rem;
+  font-weight: 100;
+  padding-bottom: 26%;
+  color: white;
+}
+.auth-options {
+  display: flex;
+  align-items: center; 
+  div{
+    margin-right: 1.5rem;
+    cursor: pointer;
+  } &:hover {
+    text-decoration: underline;
+  }
+}
+//////////////////////// FOOTER ///////////////////////
+.footer img{
+  width: 20%;
+  height: 20%;
+  padding-top: 0;
+  
+}
+.footer {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 25%;
+  
+}
+
+
+
+//////////////////////// MOBILE ////////////////////
+@media (min-width: 768px){
+  .nav {
+    justify-content: flex-start;
+    font-size: $main-font-size;
+  }
+}
