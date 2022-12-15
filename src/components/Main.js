@@ -5,6 +5,9 @@ import { Routes, Route } from 'react-router-dom';
 import List from '../pages/List';
 import ShowList from '../pages/ShowList';
 import Home from '../pages/Home';
+import Accessories from '../pages/Accessories';
+import Jerseys from '../pages/Jerseys';
+import Clothing from '../pages/Clothing';
 
 function Main(props) {
 
@@ -80,6 +83,24 @@ useEffect(() => {
 <main>
 
 <Routes>
+    <Route path="/accesories" element={
+        <Accessories 
+             
+        />
+    } />
+
+    <Route path="/jerseys" element={
+        <Jerseys 
+             
+        />
+    } />
+
+    <Route path="/clothing" element={
+        <Clothing 
+             
+        />
+    } />
+
     <Route path="/" element={
         <Home 
              
